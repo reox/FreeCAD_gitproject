@@ -31,6 +31,21 @@ static char * git_xpm[] = {
 "       !!       "};
     '''
 
+    def __init__(self):
+        # Monkey patch the save function, so we can hook it
+        z = Gui.SendMsgToActiveView
+
+        def hookedSaveFunction(*args, **kwargs):
+            res = z(*args, **kwargs)
+
+            # We like to hook after the save was done
+            if "Save" in args:
+                Msg("save pressed")
+
+            return res
+
+        Gui.SendMsgToActiveView = hookedSaveFunction
+
     def Initialize(self):
         pass
 
