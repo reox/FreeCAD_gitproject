@@ -35,12 +35,15 @@ static char * git_xpm[] = {
         # Monkey patch the save function, so we can hook it
         z = Gui.SendMsgToActiveView
 
+        from GitWrapper import commitchanges
         def hookedSaveFunction(*args, **kwargs):
             res = z(*args, **kwargs)
 
             # We like to hook after the save was done
             if "Save" in args:
                 Msg("save pressed")
+                commitchanges()
+
 
             return res
 
