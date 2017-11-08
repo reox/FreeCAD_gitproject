@@ -50,9 +50,14 @@ static char * git_xpm[] = {
         Gui.SendMsgToActiveView = hookedSaveFunction
 
     def Initialize(self):
-        pass
+        import GitWrapper
+
+        cmds = ["GitProject_CommandCommit", "GitProject_CommandTag", "GitProject_CommandCreate"]
+
+        self.appendToolbar("git project", cmds)
+        self.appendMenu("git project", cmds)
 
     def GetClassName(self):
-        return "Gui::GitProjectWorkbench"
+        return "Gui::PythonWorkbench"
 
 Gui.addWorkbench(GitProjectWorkbench())

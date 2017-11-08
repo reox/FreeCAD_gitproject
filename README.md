@@ -24,3 +24,9 @@ This workbench should have the following features:
 # Contribute?
 
 Do you like to contribute to this project? Nice! I appreciate it and would be happy over every pull request I receive!
+
+
+# Icons
+
+The git logo is released as Creative Commons by https://git-scm.com/downloads/logos.
+The other icons are released under MIT Licence from https://github.com/primer/octicons.
