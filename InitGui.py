@@ -41,7 +41,7 @@ static char * git_xpm[] = {
 
             # We like to hook after the save was done
             if "Save" in args:
-                Msg("save pressed")
+                Msg("save pressed\n")
                 commitchanges()
 
 

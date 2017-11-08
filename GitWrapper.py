@@ -8,10 +8,10 @@ def commitchanges():
     try:
         repo = git.Repo(os.path.dirname(f), search_parent_directories=True)
     except git.InvalidGitRepositoryError:
-        FreeCAD.Console.PrintMessage("{} is not a git repo...".format(os.path.dirname(f)))
+        FreeCAD.Console.PrintMessage("{} is not a git repo...\n".format(os.path.dirname(f)))
         return
     except git.NoSuchPathError:
-        FreeCAD.Console.PrintError("Ooops! The folder does not exist.")
+        FreeCAD.Console.PrintError("Ooops! The folder does not exist.\n")
         return
 
     # Add and commit the file
