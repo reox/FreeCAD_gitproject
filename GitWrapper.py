@@ -39,7 +39,18 @@ def initrepo():
 
     repo_dir = os.path.dirname(f)
 
+    # TODO show dialogs, not just console output
+    try:
+        # TODO do we need this check? It seems like it doesnt matter if we init
+        # again... Repo still there, no harm taken.
+        repo = git.Repo(repo_dir, search_parent_directories=True)
+        FreeCAD.Console.PrintMessage(u"{} is already a git repo. do nothing.\n".format(repo_dir))
+        return
+    except git.InvalidGitRepositoryError:
+        pass
+
     repo = git.Repo.init(repo_dir)
+    FreeCAD.Console.PrintMessage(u"Initialized a git repo at: {}".format(repo_dir))
     # A commit should work now
     commitchanges()
 
@@ -71,6 +82,7 @@ class CommandTag:
                 }
 
     def Activated(self):
+        # TODO show some dialog, enter a tag name, save
         pass
 
 

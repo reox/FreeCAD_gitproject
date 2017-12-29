@@ -19,10 +19,12 @@ Install `python-git` ([GitPython](https://github.com/gitpython-developers/GitPyt
 
 This workbench should have the following features:
 
+* automatically create a new commit when the file is saved
 * create a new git repo at the current folder of the file
-* create tags
-* turn autocommit on and off
-* create own commits with messages
+* create tags `// TODO`
+* turn autocommit on and off `// TODO`
+* create own commits with messages `// TODO`
+* show that this file is under version control `// TODO`
 * ???
 
 # Contribute?
