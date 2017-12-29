@@ -10,6 +10,10 @@ Target of this workbench is to allow easy versioning of your FreeCAD projects.
 If a FreeCAD file is inside a git repo, all changes (i.e. you pressed save)
 should be automatically commited.
 
+# Dependency
+
+Install `python-git` ([GitPython](https://github.com/gitpython-developers/GitPython)).
+
 
 # Features
 
