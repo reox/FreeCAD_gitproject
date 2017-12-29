@@ -28,6 +28,22 @@ def commitchanges():
     index.commit("[FreeCAD autocommit]")
 
 
+def initrepo():
+    """
+    Initialize a repo at the current file location
+    """
+    f = FreeCAD.ActiveDocument.FileName
+    if len(f) == 0:
+        # Not saved yet...
+        return
+
+    repo_dir = os.path.dirname(f)
+
+    repo = git.Repo.init(repo_dir)
+    # A commit should work now
+    commitchanges()
+
+
 class CommandCommit:
     """
     Command to commit the current file
@@ -70,7 +86,7 @@ class CommandCreate:
                 }
 
     def Activated(self):
-        pass
+        initrepo()
 
 
 if FreeCAD.GuiUp:
