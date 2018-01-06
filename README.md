@@ -14,7 +14,6 @@ should be automatically commited.
 
 Install `python-git` ([GitPython](https://github.com/gitpython-developers/GitPython)).
 
-
 # Features
 
 This workbench should have the following features:
@@ -32,6 +31,9 @@ This workbench should have the following features:
 
 Do you like to contribute to this project? Nice! I appreciate it and would be happy over every pull request I receive!
 
+# Feedback/Discussion
+
+Want to discuss this project in more detail? Please follow the [discussion thread](https://forum.freecadweb.org/viewtopic.php?f=8&t=23464#p198009) on the FreeCAD forums. 
 
 # Icons
 
